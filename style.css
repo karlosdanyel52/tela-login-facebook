@@ -1,17 +1,16 @@
 body {
-  background-color: rosybrown;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f0f2f5;
+  max-height: 100vh;
 }
 main {
   font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-  background-color: #eb160f;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f2f5;
 }
 .lado-esquerdo {
   margin-top: -100px;
@@ -50,7 +49,9 @@ main {
   flex-direction: column;
   width: 370px;
   height: 330px;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.2);
 }
+
 .lado-direito .caixa-login input {
   width: 98%;
   border: 1px solid #dddfe2;
@@ -58,7 +59,13 @@ main {
   margin-top: 10px;
   height: 50px;
   background-color: #fff;
+  padding-left: 15px;
+  font-size: 16px;
 }
+input:focus {
+  outline: 1px solid #1b74e4;
+}
+
 .lado-direito .caixa-login .btn1 {
   margin-top: 15px;
   border: none;
@@ -88,15 +95,35 @@ main {
   font-weight: normal;
 }
 a {
-  color: #1877f2;
+  color: black;
+  font-weight: 600;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
+
 input::placeholder {
-  padding-left: 15px;
   font-size: 16px;
 }
 hr {
   width: 100%;
   color: #dadde1;
   margin: 20px 16px;
+}
+
+@media (max-width: 1060px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lado-esquerdo .titulo p {
+    text-align: center;
+  }
+
+  .lado-direito .caixa-login {
+    margin: 0;
+  }
 }
